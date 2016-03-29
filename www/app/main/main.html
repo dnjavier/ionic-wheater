@@ -1,0 +1,11 @@
+<h2>Weather</h2>
+
+<input type="text" ng-model="main.city">
+<button ng-click="main.getWeather()">Search</button>
+<p><span>City: </span>{{main.weather.name}}</p>
+<p><span>Status: </span>{{main.weather.weather[0].main}}</p>
+<p><span>Description: </span>{{main.weather.weather[0].description}}</p>
+<p><span>Temp: </span>{{main.weather.main.temp}}</p>
+<p><span>Humidity: </span>{{main.weather.main.humidity}}</p>
+<p><span>Wind Speed: </span>{{main.weather.wind.speed}}</p>
+<!-- <p>{{main.weather}}</p> -->
