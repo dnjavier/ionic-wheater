@@ -27,17 +27,44 @@
 @function icon-char($filename) {
   $char: "";
 
-  @if $filename == notification {
+  @if $filename == 01d {
     $char: "\E001";
   }
-  @if $filename == rainny {
+  @if $filename == 02d {
     $char: "\E002";
   }
-  @if $filename == sunny {
+  @if $filename == 03d {
     $char: "\E003";
   }
-  @if $filename == up {
+  @if $filename == 04d {
     $char: "\E004";
+  }
+  @if $filename == 09d {
+    $char: "\E005";
+  }
+  @if $filename == 10d {
+    $char: "\E006";
+  }
+  @if $filename == 11d {
+    $char: "\E007";
+  }
+  @if $filename == 13d {
+    $char: "\E008";
+  }
+  @if $filename == 50d {
+    $char: "\E009";
+  }
+  @if $filename == notification {
+    $char: "\E00A";
+  }
+  @if $filename == rainny {
+    $char: "\E00B";
+  }
+  @if $filename == sunny {
+    $char: "\E00C";
+  }
+  @if $filename == up {
+    $char: "\E00D";
   }
 
   @return $char;
@@ -54,6 +81,33 @@
   }
 }
 
+.icon-01d {
+  @include icon(01d);
+}
+.icon-02d {
+  @include icon(02d);
+}
+.icon-03d {
+  @include icon(03d);
+}
+.icon-04d {
+  @include icon(04d);
+}
+.icon-09d {
+  @include icon(09d);
+}
+.icon-10d {
+  @include icon(10d);
+}
+.icon-11d {
+  @include icon(11d);
+}
+.icon-13d {
+  @include icon(13d);
+}
+.icon-50d {
+  @include icon(50d);
+}
 .icon-notification {
   @include icon(notification);
 }
