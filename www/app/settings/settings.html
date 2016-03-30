@@ -1,33 +1,71 @@
-<div class="container settings">
+<div class="container-fluid">
+  <div class="settings">
 
-  <div class="row">
-    <div class="col-xs-12">
-      <h2 class="text-center">Your location</h2>
-      <input type="text">
+    <div class="row header">
+
+      <div class="icon-left">
+      <!-- -->
+      </div>
+
+      <i class="fa fa-cog center"></i>
+
+      <div class="icon-rigth">
+        <label>C</label>
+        <label>F</label>
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-xs-12">
-      <p>Auto define</p>
-      <!-- toggle -->
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="text-center">Your location</h2>
+        <input class="input-text" type="text" value="Kiev">
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-xs-12">
-      <p>Notification</p>
-      <!-- toggle -->
+    <div class="row">
+      <div class="col-xs-8">
+        <p class="input-text">Auto define</p>
+      </div>
+      <div class="col-xs-4">
+        <label class="switch-light" onclick="">
+          <input type="checkbox">
+          <span class="well">
+            <span>Off</span>
+            <span>On</span>
+            <a class="btn btn-primary"></a>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-8">
+        <p class="input-text">Notification</p>
+      </div>
+      <div class="col-xs-4">
+        <label class="switch-light" onclick="">
+          <input type="checkbox">
+          <span class="well">
+            <span>Off</span>
+            <span>On</span>
+            <a class="btn btn-primary"></a>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="row time">
       <input type="time">
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-xs-3 text-center vcenter">
-      <i class="fa fa-info-circle"></i>
-    </div>
-    <div class="col-xs-9 notification vcenter">
-      <p>Every day at the appointed time you will receive notification about the weather on your lock screen</p>
+
+    <div class="row">
+      <div class="col-xs-3 text-center vcenter">
+        <i class="fa fa-info-circle"></i>
+      </div>
+      <div class="col-xs-9 notification vcenter">
+        <p>Every day at the appointed time you will receive notification about the weather on your lock screen</p>
+      </div>
     </div>
   </div>
 </div>
