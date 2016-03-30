@@ -4,7 +4,7 @@
   src: url("../../assets/fonts/icons/wheater-font.eot");
   src: url("../../assets/fonts/icons/wheater-font.eot?#iefix") format("eot"), url("../../assets/fonts/icons/wheater-font.woff2") format("woff2"), url("../../assets/fonts/icons/wheater-font.woff") format("woff"), url("../../assets/fonts/icons/wheater-font.ttf") format("truetype"), url("../../assets/fonts/icons/wheater-font.svg#wheater-font") format("svg"); }
 
-.icon-notification:before, .icon-rainny:before, .icon-sunny:before, .icon-up:before {
+.icon-01d:before, .icon-02d:before, .icon-03d:before, .icon-04d:before, .icon-09d:before, .icon-10d:before, .icon-11d:before, .icon-13d:before, .icon-50d:before, .icon-notification:before, .icon-rainny:before, .icon-sunny:before, .icon-up:before {
   font-family: "wheater-font";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,17 +14,44 @@
   text-decoration: none;
   text-transform: none; }
 
-.icon-notification:before {
+.icon-01d:before {
   content: ""; }
 
-.icon-rainny:before {
+.icon-02d:before {
   content: ""; }
 
-.icon-sunny:before {
+.icon-03d:before {
   content: ""; }
 
-.icon-up:before {
+.icon-04d:before {
   content: ""; }
+
+.icon-09d:before {
+  content: ""; }
+
+.icon-10d:before {
+  content: ""; }
+
+.icon-11d:before {
+  content: ""; }
+
+.icon-13d:before {
+  content: ""; }
+
+.icon-50d:before {
+  content: ""; }
+
+.icon-notification:before {
+  content: ""; }
+
+.icon-rainny:before {
+  content: ""; }
+
+.icon-sunny:before {
+  content: ""; }
+
+.icon-up:before {
+  content: ""; }
 
 /*!
   Ionicons, v2.0.1
@@ -9770,7 +9797,8 @@ h2 {
       color: #272727;
       position: absolute;
       top: 0;
-      left: 28%;
+      width: 100%;
+      text-align: center;
       margin-top: -80px; }
     .settings .header .icon-rigth {
       position: absolute;
@@ -9801,7 +9829,9 @@ h2 {
     align-items: center; }
   .settings i {
     top: 20%;
-    font-size: 30px; }
+    font-size: 30px;
+    width: 100%;
+    text-align: center; }
   .settings .notification {
     padding-left: 0;
     font-size: 12px; }

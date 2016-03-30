@@ -10,15 +10,15 @@
       <i class="fa fa-cog center"></i>
 
       <div class="icon-rigth">
-        <label>C</label>
-        <label>F</label>
+        <label ng-click="settings.temp('c')">C</label>
+        <label ng-click="settings.temp('f')">F</label>
       </div>
     </div>
 
     <div class="row">
       <div class="col-xs-12">
         <h2 class="text-center">Your location</h2>
-        <input class="input-text" type="text" value="Kiev">
+        <input class="input-text" type="text" ng-model="settings.location" >
       </div>
     </div>
 
@@ -28,7 +28,7 @@
       </div>
       <div class="col-xs-4">
         <label class="switch-light" onclick="">
-          <input type="checkbox">
+          <input type="checkbox" ng-model="settings.autoDefine">
           <span class="well">
             <span>Off</span>
             <span>On</span>
@@ -44,7 +44,7 @@
       </div>
       <div class="col-xs-4">
         <label class="switch-light" onclick="">
-          <input type="checkbox">
+          <input type="checkbox" ng-model="settings.notification">
           <span class="well">
             <span>Off</span>
             <span>On</span>
@@ -54,12 +54,12 @@
       </div>
     </div>
 
-    <div class="row time">
-      <input type="time">
+    <div class="row time" ng-if="settings.notification">
+      <input type="time" ng-model="settings.time">
     </div>
 
 
-    <div class="row">
+    <div class="row" ng-if="settings.notification">
       <div class="col-xs-3 text-center vcenter">
         <i class="fa fa-info-circle"></i>
       </div>

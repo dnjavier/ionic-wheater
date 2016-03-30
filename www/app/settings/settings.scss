@@ -25,7 +25,9 @@
       color: #272727;
       position: absolute;
       top: 0;
-      left: 28%;
+      //left: 28%;
+      width: 100%;
+      text-align: center;
       margin-top: -80px;
     }
 
@@ -83,6 +85,8 @@
   i {
     top: 20%;
     font-size: 30px;
+    width: 100%;
+    text-align: center;
   }
 
   .notification {
