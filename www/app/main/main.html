@@ -9,7 +9,7 @@
 		<h2 class="temperature-main">{{main.weather.list[0].temp.day | number:0 }}<span>&deg;</span></h2>
 		<div class="temperature-night"><p>Night</p><p class="temperature">{{main.weather.list[0].temp.night | number:0}}</p></div>
 	</div>	
-	<p class="temperature-icon {{main.weather.list[0].weather[0].icon}} fa fa-cloud"></p>
+	<i class="temperature-icon icon-{{main.weather.list[0].weather[0].icon}}"></i>
 	<p class="">{{main.weather.list[0].weather[0].description| uppercase}}</p>
 
 	<div class="more-information">
