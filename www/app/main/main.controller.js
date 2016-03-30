@@ -11,17 +11,11 @@
     main.title = 'Test main controller';
 
    main.getWeather = function () {
-    console.log(main.city);
-      this.conection.getWeather(main.city)
+      main.conection.getWeather('london' , 'imperial')
       .then(function (res){
-        console.log(res.data)
         main.weather = res.data;
       });
-
-      main.city ='';
-    }
-
-
+    }();
   }
 
 })();
