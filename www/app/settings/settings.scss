@@ -1,8 +1,77 @@
 .settings {
+  height: 100vh;
   font-family: 'Roboto';
   font-weight: 200;
+  background-color: $main-gray;
+  color: $white-gray;
+
+  .col-xs-12 {
+    padding: 0;
+  }
+
+  .row {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .header {
+    position: relative;
+    padding-top: 30px;
+    margin-bottom: 70px;
+
+    i.center {
+      font-size: 150px;
+      color: #272727;
+      position: absolute;
+      top: 0;
+      left: 28%;
+      margin-top: -80px;
+    }
+
+    .icon-rigth {
+      position: absolute;
+      top: 20px;
+      right: 0;
+
+      label {
+        font-size: 25px;
+        margin-left: 15px;
+      }
+
+      label:first-child {
+        color: #6E6E6E;
+      }
+
+    }
+  }
+
+  .time {
+    margin-bottom: 0;
+  }
 
   h2 {
+    color: $white-gray;
+    font-weight: 200;
+  }
+
+  .input-text {
+    font-size: 25px;
+    font-weight: 200;
+  }
+
+  input {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  input[type='time'] {
 
   }
 

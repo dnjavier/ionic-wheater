@@ -1,5 +1,8 @@
+
+.main {
+background-color: $main-gray;
 .container-fluid {
-	background-color: $main-gray;
+	
 	color: $white;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
@@ -23,57 +26,59 @@
 	}
 }
 
-h2 {
-	color: $white;
-	font-weight: 200;
-	margin: 0 0 5% 0;
-	text-align: center;
-}
 
-.temperatures {
-	margin: 0 auto;
-	max-width: 295px;
-	position: relative;
-}
-
-.temperature-main {
-	font-size: 10rem;
-	font-weight: 200;
-	margin: 0 0 5% 0;
-	text-align: center;
-}
-
-.temperature-night {
-	position: absolute;
-	right: 0;
-	text-align: center;
-	top: 50%;
-
-	p {
-		font-size: 12px;
-		margin: 0;
+	h2 {
+		color: $white;
+		font-weight: 200;
+		margin: 0 0 5% 0;
+		text-align: center;
 	}
 
-	.temperature {
-		font-size: 18px;
-	}
-}
-
-.temperature-icon {
-	font-size: 100px;
-}
-
-.more-information {
-	bottom: 21px;
-	left: 0;
-	position: absolute;
-	width: 100%;
-	>div {
-		float: left;
-		width: 33.33333%;
+	.temperatures {
+		margin: 0 auto;
+		max-width: 295px;
+		position: relative;
 	}
 
-	i {
-		font-size: 21px;
+	.temperature-main {
+		font-size: 10rem;
+		font-weight: 200;
+		margin: 0 0 5% 0;
+		text-align: center;
+	}
+
+	.temperature-night {
+		position: absolute;
+		right: 0;
+		text-align: center;
+		top: 50%;
+
+		p {
+			font-size: 12px;
+			margin: 0;
+		}
+
+		.temperature {
+			font-size: 18px;
+		}
+	}
+
+	.temperature-icon {
+		font-size: 100px;
+	}
+
+	.more-information {
+		bottom: 21px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		>div {
+			float: left;
+			width: 33.33333%;
+		}
+
+		i {
+			font-size: 21px;
+		}
 	}
 }
