@@ -9788,11 +9788,11 @@ a.button {
     text-align: center; }
     .main .container-fluid p {
       margin-bottom: 16px; }
-    .main .container-fluid .settings {
+    .main .container-fluid .main-button {
       left: 16px;
       position: absolute;
       top: 21px; }
-      .main .container-fluid .settings i {
+      .main .container-fluid .main-button i {
         font-size: 21px; }
   .main h2 {
     color: #fff;
@@ -9845,7 +9845,7 @@ a.button {
     margin-bottom: 20px; }
   .settings .header {
     position: relative;
-    padding-top: 30px;
+    padding-top: 21px;
     margin-bottom: 70px; }
     .settings .header i.center {
       font-size: 150px;

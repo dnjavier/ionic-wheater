@@ -1,15 +1,15 @@
 
 <section class="main">
 	<div class="container-fluid">
-	<div class="settings">
-		<i class="fa fa-cog"></i>
+	<div class="main-button">
+		<i class="fa fa-cog" ui-sref="settings"></i>
 	</div>
 	<h2>Today in <br>{{main.weather.city.name}}</h2>
 	<div class="temperatures">
 		<h2 class="temperature-main">{{main.weather.list[0].temp.day | number:0 }}<span>&deg;</span></h2>
 		<div class="temperature-night"><p>Night</p><p class="temperature">{{main.weather.list[0].temp.night | number:0}}</p></div>
 	</div>
-	<i class="temperature-icon icon-50d {{main.weather.list[0].weather[0].icon}}"></i>
+	<i class="temperature-icon icon-{{main.weather.list[0].weather[0].icon | limitTo:2}}d"></i>
 	<p class="">{{main.weather.list[0].weather[0].description| uppercase}}</p>
 
 	<div class="more-information">
@@ -23,7 +23,7 @@
 		</div>
 		<div lass="wind-direction">
 			<p>{{main.weather.list[0].deg}}</p>
-			<i class="fa fa-long-arrow-up"></i>
+			<i style="transform: rotate({{main.weather.list[0].deg}}deg);-webkit-transform: rotate({{main.weather.list[0].deg}}deg);"class="fa fa-long-arrow-left"></i>
 		</div>
 	</div>
 </div>
