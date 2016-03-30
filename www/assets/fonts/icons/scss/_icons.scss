@@ -27,14 +27,17 @@
 @function icon-char($filename) {
   $char: "";
 
-  @if $filename == rainny {
+  @if $filename == notification {
     $char: "\E001";
   }
-  @if $filename == sunny {
+  @if $filename == rainny {
     $char: "\E002";
   }
-  @if $filename == up {
+  @if $filename == sunny {
     $char: "\E003";
+  }
+  @if $filename == up {
+    $char: "\E004";
   }
 
   @return $char;
@@ -51,6 +54,9 @@
   }
 }
 
+.icon-notification {
+  @include icon(notification);
+}
 .icon-rainny {
   @include icon(rainny);
 }

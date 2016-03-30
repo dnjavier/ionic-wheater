@@ -1,0 +1,27 @@
+.settings {
+  font-family: 'Roboto';
+  font-weight: 200;
+
+  h2 {
+
+  }
+
+  .vcenter {
+    display: flex;
+    align-items: center;
+  }
+
+  i {
+    top: 20%;
+    font-size: 30px;
+  }
+
+  .notification {
+    padding-left: 0;
+    font-size: 12px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
