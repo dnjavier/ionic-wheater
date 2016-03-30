@@ -1,20 +1,10 @@
 @charset "UTF-8";
-/*
-To customize the look and feel of Ionic, you can override the variables
-in ionic's _variables.scss file.
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300);
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; }
 
-For example, you might change some of the default colors:
-
-$light:                           #fff !default;
-$stable:                          #f8f8f8 !default;
-$positive:                        #387ef5 !default;
-$calm:                            #11c1f3 !default;
-$balanced:                        #33cd5f !default;
-$energized:                       #ffc900 !default;
-$assertive:                       #ef473a !default;
-$royal:                           #886aea !default;
-$dark:                            #444 !default;
-*/
 @font-face {
   font-family: "wheater-font";
   src: url("../../assets/fonts/icons/wheater-font.eot");
@@ -9758,8 +9748,66 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.container-fluid {
+  background-color: #343434;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  height: 100vh;
+  padding: 21px 16px;
+  position: relative;
+  text-align: center; }
+  .container-fluid p {
+    margin-bottom: 16px; }
+  .container-fluid .settings {
+    left: 16px;
+    position: absolute;
+    top: 21px; }
+    .container-fluid .settings i {
+      font-size: 21px; }
+
 h2 {
-  color: red; }
+  color: #fff;
+  font-weight: 200;
+  margin: 0 0 5% 0;
+  text-align: center; }
+
+.temperatures {
+  margin: 0 auto;
+  max-width: 295px;
+  position: relative; }
+
+.temperature-main {
+  font-size: 10rem;
+  font-weight: 200;
+  margin: 0 0 5% 0;
+  text-align: center; }
+
+.temperature-night {
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%; }
+  .temperature-night p {
+    font-size: 12px;
+    margin: 0; }
+  .temperature-night .temperature {
+    font-size: 18px; }
+
+.temperature-icon {
+  font-size: 100px; }
+
+.more-information {
+  bottom: 21px;
+  left: 0;
+  position: absolute;
+  width: 100%; }
+  .more-information > div {
+    float: left;
+    width: 33.33333%; }
+  .more-information i {
+    font-size: 21px; }
 
 .settings {
   font-family: 'Roboto';

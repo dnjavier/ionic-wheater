@@ -1,9 +1,15 @@
-
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300);
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
-$main-gray : 343434;
+$main-gray : #343434;
 $white : #fff;
+
+html,
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
 // Include all of Ionic
 @import "www/assets/fonts/icons/scss/icons";
 @import "www/lib/ionic/scss/ionic";

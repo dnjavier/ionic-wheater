@@ -7,8 +7,8 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 var inject = require('gulp-inject');
-var iconfont = require('gulp-iconfont');
-var iconfontCss = require('gulp-iconfont-css');
+// var iconfont = require('gulp-iconfont');
+// var iconfontCss = require('gulp-iconfont-css');
 var runTimestamp = Math.round(Date.now()/1000);
 
 var paths = {
@@ -44,22 +44,22 @@ gulp.task('inject:js', function () {
 /**
  * Takes SVG files and transforms it to font
  */
-gulp.task('iconfont', function(){
-  gulp.src(['./www/assets/icons/*.svg'])
-    .pipe(iconfontCss({
-      fontName: 'wheater-font',
-      path: './www/assets/icons/templates/_icons.scss',
-      targetPath: './scss/_icons.scss',
-      fontPath: '../../assets/fonts/icons/'
-    }))
-    .pipe(iconfont({
-      fontName: 'wheater-font',
-      prependUnicode: true,
-      formats: ['ttf', 'eot', 'woff', 'woff2'],
-      timestamp: runTimestamp
-     }))
-    .pipe(gulp.dest('./www/assets/fonts/icons/'));
-});
+// gulp.task('iconfont', function(){
+//   gulp.src(['./www/assets/icons/*.svg'])
+//     .pipe(iconfontCss({
+//       fontName: 'wheater-font',
+//       path: './www/assets/icons/templates/_icons.scss',
+//       targetPath: './scss/_icons.scss',
+//       fontPath: '../../assets/fonts/icons/'
+//     }))
+//     .pipe(iconfont({
+//       fontName: 'wheater-font',
+//       prependUnicode: true,
+//       formats: ['ttf', 'eot', 'woff', 'woff2'],
+//       timestamp: runTimestamp
+//      }))
+//     .pipe(gulp.dest('./www/assets/fonts/icons/'));
+// });
 
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
