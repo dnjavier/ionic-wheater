@@ -12,7 +12,7 @@
       autoDefine: true,
       notification: false,
       time: new Date(),
-      unit: 'c'
+      unit: 'imperial'
     };
 
     var setSettings = function(location, autoDefine, notification, time, unit) {
@@ -29,7 +29,8 @@
 
     return {
       getWeather : getWeather,
-      setSettings : setSettings
+      setSettings : setSettings,
+      settings : settings
     }
   }
 

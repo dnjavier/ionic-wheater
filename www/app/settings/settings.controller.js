@@ -8,19 +8,20 @@
   function SettingsController(conection){
     var settings = this;
 
-    settings.location = 'Kiev';
-    settings.autoDefine = true;
-    settings.notification = true;
-    settings.unit;
+    settings.location = conection.settings.location;
+    settings.autoDefine = conection.settings.autoDefine;
+    settings.notification = conection.settings.notification;
+    settings.unit = conection.settings.unit;
+    settings.time = conection.settings.time;
 
 
     settings.temp = function(unit) {
       if(unit == 'c') {
-        //sets celcious
+        settings.unit = 'metric';
       }
 
       if(unit == 'f') {
-        //sets farengh
+        settings.unit = 'imperial';
       }
 
     }
