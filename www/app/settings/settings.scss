@@ -25,7 +25,6 @@
       color: #272727;
       position: absolute;
       top: 0;
-      //left: 28%;
       width: 100%;
       text-align: center;
       margin-top: -80px;
@@ -39,10 +38,7 @@
       label {
         font-size: 25px;
         margin-left: 15px;
-      }
-
-      label:first-child {
-        color: #6E6E6E;
+        //color: #6E6E6E;
       }
 
     }
@@ -97,4 +93,8 @@
       margin: 0;
     }
   }
+}
+
+.lightfont {
+  color: #6E6E6E;
 }

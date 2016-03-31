@@ -9862,8 +9862,6 @@ a.button {
       .settings .header .icon-rigth label {
         font-size: 25px;
         margin-left: 15px; }
-      .settings .header .icon-rigth label:first-child {
-        color: #6E6E6E; }
   .settings .time {
     margin-bottom: 0; }
   .settings h2 {
@@ -9892,3 +9890,6 @@ a.button {
     font-size: 12px; }
     .settings .notification p {
       margin: 0; }
+
+.lightfont {
+  color: #6E6E6E; }

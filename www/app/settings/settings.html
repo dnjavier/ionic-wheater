@@ -9,8 +9,8 @@
       <i class="fa fa-cog center"></i>
 
       <div class="icon-rigth">
-        <label ng-click="settings.temp('c')">C</label>
-        <label ng-click="settings.temp('f')">F</label>
+        <label ng-click="settings.temp('c')" ng-class="{lightfont: !settings.unitColor}">C</label>
+        <label ng-click="settings.temp('f')" ng-class="{lightfont: settings.unitColor}">F</label>
       </div>
     </div>
 
