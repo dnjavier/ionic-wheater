@@ -2,7 +2,7 @@
 .main {
 background-color: $main-gray;
 .container-fluid {
-	
+
 	color: $white;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
@@ -30,7 +30,7 @@ background-color: $main-gray;
 	h2 {
 		color: $white;
 		font-weight: 200;
-		margin: 0 0 5% 0;
+		margin: 0;
 		text-align: center;
 	}
 
@@ -63,8 +63,14 @@ background-color: $main-gray;
 		}
 	}
 
+  .temperature-icon-wrap {
+    img {
+      margin-bottom: 1rem;
+    }
+  }
 	.temperature-icon {
-		font-size: 100px;
+    font-size: 250px;
+    display: block;
 	}
 
 	.more-information {
@@ -85,6 +91,63 @@ background-color: $main-gray;
 
 @media all and (orientation:landscape) {
 	.main {
-	background-color: red;
+
+    h2 {
+        margin-bottom: 1%;
+      }
+  .temperatures-wrap {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+	 .temperatures {
+      float: left;
+      width: 50%;
+      position: relative;
+
+      h2 {
+        font-size: 8rem;
+        line-height: 8rem;
+      }
+    }
+
+    .temperature-icon-wrap {
+
+      float: right;
+      width: 50%;
+      position: relative;
+    }
 	}
+}
+.background-01d {
+  background-color:$pink;
+}
+.background-02d {
+  background-color:$orange;
+}
+.background-03d {
+  background-color:$yellow;
+}
+.background-04d {
+  background-color:$green;
+}
+.background-09d {
+  background-color:$cream;
+}
+.background-10d {
+  background-color:$gray;
+}
+.background-11d {
+  background-color:$blue;
+}
+.background-13d {
+  background-color:$light-blue;
+}
+.background-50d {
+  background-color:$turquoise;
 }

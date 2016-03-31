@@ -9797,7 +9797,7 @@ a.button {
   .main h2 {
     color: #fff;
     font-weight: 200;
-    margin: 0 0 5% 0;
+    margin: 0;
     text-align: center; }
   .main .temperatures {
     margin: 0 auto;
@@ -9818,8 +9818,11 @@ a.button {
       margin: 0; }
     .main .temperature-night .temperature {
       font-size: 18px; }
+  .main .temperature-icon-wrap img {
+    margin-bottom: 1rem; }
   .main .temperature-icon {
-    font-size: 100px; }
+    font-size: 250px;
+    display: block; }
   .main .more-information {
     bottom: 21px;
     left: 0;
@@ -9830,6 +9833,56 @@ a.button {
       width: 33.33333%; }
     .main .more-information i {
       font-size: 21px; }
+
+@media all and (orientation: landscape) {
+  .main h2 {
+    margin-bottom: 1%; }
+  .main .temperatures-wrap {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center; }
+  .main .temperatures {
+    float: left;
+    width: 50%;
+    position: relative; }
+    .main .temperatures h2 {
+      font-size: 8rem;
+      line-height: 8rem; }
+  .main .temperature-icon-wrap {
+    float: right;
+    width: 50%;
+    position: relative; } }
+
+.background-01d {
+  background-color: #f2385a; }
+
+.background-02d {
+  background-color: #F1854B; }
+
+.background-03d {
+  background-color: #FF0000; }
+
+.background-04d {
+  background-color: #1D9E48; }
+
+.background-09d {
+  background-color: #BDA881; }
+
+.background-10d {
+  background-color: #999999; }
+
+.background-11d {
+  background-color: #375D81; }
+
+.background-13d {
+  background-color: #82A8C4; }
+
+.background-50d {
+  background-color: #36B1BF; }
 
 .settings {
   height: 100vh;
@@ -9879,9 +9932,6 @@ a.button {
     margin-bottom: 15px; }
   .settings input:focus {
     outline: none; }
-  .settings .vcenter {
-    display: flex;
-    align-items: center; }
   .settings i {
     top: 20%;
     font-size: 30px;
@@ -9895,3 +9945,7 @@ a.button {
 
 .lightfont {
   color: #6E6E6E; }
+
+.vcenter {
+  display: flex;
+  align-items: center; }

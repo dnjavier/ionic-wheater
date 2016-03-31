@@ -5,37 +5,56 @@
     .module('starter')
     .controller('MainController', MainController);
 
-  function MainController (conection , $cordovaDeviceOrientation){
+  function MainController (conection){
     var main = this;
+    main.windDirection = 'West';
     main.connection = conection;
     main.title = 'Test main controller';
 
     main.getWeather = function () {
       main.connection.getWeather(main.connection.settings.location , main.connection.settings.unit)
       .then(function (res){
+        main.windDirection = setDirection(res.data.list[0].deg);
         main.weather = res.data;
       });
     }();
 
-  main.dir = 0;
 
-    var options = {
-        frequency: 500
-    };
+    function setDirection(degrees){
+      var deg = degrees;
 
-    main.watchPromise = $cordovaDeviceOrientation.watchHeading(options);
+      if(deg > 85 && deg < 95){
+        return 'North';
+      }
 
-    main.watchPromise.then(
-            null, 
-            function(error) {
-                console.log(error);
-                alert("no");
-            }, 
-            function(result) {
-                main.dir = result.trueHeading;
-                alert("yes");
-            }
-        );
+      if(deg > 94 && deg < 174){
+        return 'North-East';
+      }
+
+      if(deg > 175 && deg < 185){
+        return 'East';
+      }
+
+      if(deg > 184 && deg < 264){
+        return 'South-East';
+      }
+
+      if(deg > 265 && deg < 275){
+        return 'South';
+      }
+
+      if(deg > 274 && deg < 354){
+        return 'South-West';
+      }
+
+      if(deg < 5 && deg > 355){
+        return 'West';
+      }
+
+      if(deg > 4 && deg < 84){
+        return 'North-West';
+      }
+    }
 
   }
 

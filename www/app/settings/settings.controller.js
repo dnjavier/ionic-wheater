@@ -5,7 +5,7 @@
     .module('starter')
     .controller('SettingsController', SettingsController);
 
-  function SettingsController(conection, $cordovaGeolocation){
+  function SettingsController(conection, $cordovaGeolocation, $scope, $rootScope, $ionicPlatform, $cordovaLocalNotification){
     var settings = this;
     settings.unitColor = true;
 
@@ -14,6 +14,24 @@
     settings.notification = conection.settings.notification;
     settings.unit = conection.settings.unit;
     settings.time = conection.settings.time;
+
+    $ionicPlatform.ready(function(){
+
+      cordova.plugins.notification.local.schedule({
+        id: 1,
+        text: "Single Notification",
+        sound: isAndroid ? 'file://sound.mp3' : 'file://beep.caf',
+        data: { secret:key }
+      });
+
+    });
+
+    $rootScope.$on('$cordovaLocalNotification:trigger',
+      function (event, notification, state) {
+        console.log('event triggered');
+      });
+
+
 
     var options = {
       enableHighAccuracy: false,
