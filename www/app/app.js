@@ -1,6 +1,7 @@
 
 angular.module('starter', [
-  'ionic'
+  'ionic',
+  'ngCordova'
   ])
 
 .run(function($ionicPlatform) {

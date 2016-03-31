@@ -17,24 +17,7 @@
   // settings.time = time;
   // settings.unit = unit;
   //
-    var options = {
-      enableHighAccuracy: true,
-      timeout: 5000,
-      maximumAge: 0
-    };
 
-    function success(pos) {
-      var crd = pos.coords;
-      console.log('Lat: '+crd.latitude);
-      console.log('Lat: '+crd.longitude);
-      console.log('Lat: '+crd.accuracy+ ' meters.');
-    };
-
-    function error(err) {
-      alert('ERROR(' + err.code + '): ' + err.message);
-    };
-
-    navigator.geolocation.getCurrentPosition(success, error, options);
 
 
     main.getWeather = function () {
