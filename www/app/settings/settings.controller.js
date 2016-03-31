@@ -5,7 +5,7 @@
     .module('starter')
     .controller('SettingsController', SettingsController);
 
-  function SettingsController(conection){
+  function SettingsController(conection, $cordovaGeolocation){
     var settings = this;
     settings.unitColor = true;
 
@@ -16,23 +16,25 @@
     settings.time = conection.settings.time;
 
     var options = {
-      enableHighAccuracy: true,
+      enableHighAccuracy: false,
       timeout: 5000,
       maximumAge: 0
     };
 
-    function success(pos) {
-      var crd = pos.coords;
-      console.log('Lat: '+crd.latitude);
-      console.log('Lat: '+crd.longitude);
-      console.log('Lat: '+crd.accuracy+ ' meters.');
-    };
-
-    function error(err) {
-      alert('ERROR(' + err.code + '): ' + err.message);
-    };
-
-    navigator.geolocation.getCurrentPosition(success, error, options);
+    settings.getLocation = function(){
+      $cordovaGeolocation
+        .getCurrentPosition(options)
+        .then(function (position) {
+          var lat  = position.coords.latitude;
+          var long = position.coords.longitude;
+          var acur = position.coords.accuracy;
+          alert('lat: '+lat+
+              '\n long: '+long+
+              '\n acur: '+acur);
+        }, function(err) {
+          // error
+        });
+    }
 
 
     settings.temp = function(unit) {
