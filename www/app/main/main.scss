@@ -82,3 +82,9 @@ background-color: $main-gray;
 		}
 	}
 }
+
+@media all and (orientation:landscape) {
+	.main {
+	background-color: red;
+	}
+}
