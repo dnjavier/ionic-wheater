@@ -12,10 +12,11 @@
     main.title = 'Test main controller';
 
     main.getWeather = function () {
-      main.connection.getWeather(main.connection.settings.location , main.connection.settings.unit)
+      main.connection.getWeather(main.connection.settings.location , main.connection.settings.unit ,main.connection.settings.lat,main.connection.settings.lon)
       .then(function (res){
         main.windDirection = setDirection(res.data.list[0].deg);
         main.weather = res.data;
+        conection.locationResult = {city:main.weather.city.name, temp:main.weather.list[0].temp.day};
       });
     }();
 

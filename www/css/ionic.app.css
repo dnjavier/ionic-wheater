@@ -9943,6 +9943,10 @@ a.button {
     .settings .notification p {
       margin: 0; }
 
+.btn-primary {
+  background-color: transparent;
+  border: 2px solid #fff; }
+
 .lightfont {
   color: #6E6E6E; }
 
