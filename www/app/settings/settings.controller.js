@@ -5,33 +5,29 @@
     .module('starter')
     .controller('SettingsController', SettingsController);
 
-  function SettingsController(conection, $cordovaGeolocation, $scope, $rootScope, $ionicPlatform, $cordovaLocalNotification){
+  function SettingsController(conection, $cordovaGeolocation, $cordovaLocalNotification){
     var settings = this;
-    settings.unitColor = true;
 
+    settings.unitColor = true;
     settings.location = conection.settings.location;
     settings.autoDefine = conection.settings.autoDefine;
     settings.notification = conection.settings.notification;
     settings.unit = conection.settings.unit;
     settings.time = conection.settings.time;
 
-    $ionicPlatform.ready(function(){
+    settings.setNotification = function() {
+      var alarmTime = new Date();
+      alarmTime.setMinutes(alarmTime.getMinutes() + 1);
 
-      cordova.plugins.notification.local.schedule({
-        id: 1,
-        text: "Single Notification",
-        sound: isAndroid ? 'file://sound.mp3' : 'file://beep.caf',
-        data: { secret:key }
+      $cordovaLocalNotification.add({
+          id: "12345",
+          date: alarmTime,
+          message: "This is a message",
+          title: "This is a title"
+      }).then(function () {
+          console.log("The notification has been set");
       });
-
-    });
-
-    $rootScope.$on('$cordovaLocalNotification:trigger',
-      function (event, notification, state) {
-        console.log('event triggered');
-      });
-
-
+    };
 
     var options = {
       enableHighAccuracy: false,
@@ -54,7 +50,6 @@
         });
     }
 
-
     settings.temp = function(unit) {
       if(unit == 'c') {
         settings.unit = 'metric';
@@ -71,8 +66,6 @@
     settings.setValues = function(){
       conection.setSettings(settings.location, settings.autoDefine, settings.notification, settings.time, settings.unit);
     }
-
-
   }
 
 })();
