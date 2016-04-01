@@ -15,21 +15,42 @@
     settings.unit = conection.settings.unit;
     settings.time = conection.settings.time;
 
-    $ionicPlatform.ready(function(){
-
-      cordova.plugins.notification.local.schedule({
+      $scope.scheduleEveryMinuteNotification = function () {
+      $cordovaLocalNotification.schedule({
         id: 1,
-        text: "Single Notification",
-        sound: isAndroid ? 'file://sound.mp3' : 'file://beep.caf',
-        data: { secret:key }
+        title: 'Title here',
+        text: 'Text here',
+        every: 'minute'
+      }).then(function (result) {
+        console.log('22222');
       });
+    };
 
+     $scope.scheduleDelayedNotification = function () {
+      var now = new Date().getTime();
+      var _10SecondsFromNow = new Date(now + 10 * 1000);
+      
+      $cordovaLocalNotification.schedule({
+        id: 1,
+        title: 'Title here',
+        text: 'Text here',
+        at: _10SecondsFromNow
+      }).then(function (result) {
+        console.log('22222');
+      });
+    };
+
+    $rootScope.$on('$cordovaLocalNotification:schedule',
+    function (event, notification, state) {
+      console.log('hola');
     });
 
     $rootScope.$on('$cordovaLocalNotification:trigger',
-      function (event, notification, state) {
-        console.log('event triggered');
-      });
+    function (event, notification, state) {
+      console.log('hola');
+    });
+
+  
 
 
 
@@ -43,12 +64,12 @@
       $cordovaGeolocation
         .getCurrentPosition(options)
         .then(function (position) {
-          var lat  = position.coords.latitude;
-          var long = position.coords.longitude;
+          settings.location ='current location';
+          settings.lat  = position.coords.latitude;
+          settings.lon = position.coords.longitude;
           var acur = position.coords.accuracy;
-          alert('lat: '+lat+
-              '\n long: '+long+
-              '\n acur: '+acur);
+
+          settings.setValues();
         }, function(err) {
           // error
         });
@@ -69,7 +90,7 @@
     }
 
     settings.setValues = function(){
-      conection.setSettings(settings.location, settings.autoDefine, settings.notification, settings.time, settings.unit);
+      conection.setSettings(settings.location, settings.autoDefine, settings.notification, settings.time, settings.unit,settings.lat,settings.lon);
     }
 
 

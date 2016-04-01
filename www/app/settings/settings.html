@@ -3,7 +3,7 @@
     <div class="row header">
 
       <div class="icon-left">
-      <i class="fa fa-angle-left" ui-sref="main" ng-click="settings.setValues()"></i>
+      <i class="fa fa-angle-left" ui-sref="main" ></i>
       </div>
 
       <i class="fa fa-cog center"></i>
@@ -27,18 +27,8 @@
     </div>
 
     <div class="row">
-      <div class="col-xs-8">
-        <p class="input-text">Auto define</p>
-      </div>
-      <div class="col-xs-4">
-        <label class="switch-light" onclick="">
-          <input type="checkbox" ng-model="settings.autoDefine">
-          <span class="well">
-            <span>Off</span>
-            <span>On</span>
-            <a class="btn btn-primary"></a>
-          </span>
-        </label>
+      <div class="col-xs-12">
+        <button ng-click="settings.setValues()" class="col-xs-offset-5 col-xs-2 btn btn-primary" ui-sref="main">SET</button>
       </div>
     </div>
 
