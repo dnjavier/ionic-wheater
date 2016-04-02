@@ -96,10 +96,15 @@
   }
 }
 
-  .btn-primary {
-    background-color: transparent;
-    border: 2px solid $white;
-  }
+.btn-default,
+.btn-default:focus,
+.btn-default:hover,
+.btn-default:active
+ {
+  background-color: transparent;
+  border: 2px solid $white;
+  color: $white;
+}
 
 .lightfont {
   color: #6E6E6E;
@@ -108,4 +113,9 @@
 .vcenter {
   display: flex;
   align-items: center;
+}
+
+.spinner {
+  display: block;
+  margin-bottom: 1rem;
 }

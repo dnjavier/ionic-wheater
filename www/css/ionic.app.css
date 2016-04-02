@@ -9943,9 +9943,13 @@ a.button {
     .settings .notification p {
       margin: 0; }
 
-.btn-primary {
+.btn-default,
+.btn-default:focus,
+.btn-default:hover,
+.btn-default:active {
   background-color: transparent;
-  border: 2px solid #fff; }
+  border: 2px solid #fff;
+  color: #fff; }
 
 .lightfont {
   color: #6E6E6E; }
@@ -9953,3 +9957,7 @@ a.button {
 .vcenter {
   display: flex;
   align-items: center; }
+
+.spinner {
+  display: block;
+  margin-bottom: 1rem; }

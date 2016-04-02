@@ -17,15 +17,17 @@
     };
 
     settings.getLocation = function(){
+      settings.spinner = true;
+      settings.config.location = '';
       $cordovaGeolocation
         .getCurrentPosition(options)
         .then(function (position) {
-          settings.config.location = 'current location';
+          settings.spinner = false;
           settings.config.lat = position.coords.latitude;
           settings.config.lon = position.coords.longitude;
           var acur = position.coords.accuracy;
-
           conection.setSettings(settings);
+          settings.config.location = 'current location';
         }, function(err) {
           // error
         });
@@ -45,7 +47,9 @@
     }
 
     settings.setValues = function(){
-      conection.notification(settings.config.location, settings.time, settings.config.lat, settings.config.lon);
+      if (settings.notification) {
+        conection.notification(settings.config.location, settings.time, settings.config.lat, settings.config.lon);
+      }
       conection.setSettings(settings);
       $state.go('main');
     }
