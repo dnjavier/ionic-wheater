@@ -30,7 +30,8 @@
 
     var getWeather = function (city , unit , lat, lon) {
       if (city ==='current location') {
-        return $http.get('http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + lat + '&lon=' + lon + '&cnt=1&mode=json&units=' + unit + '&cnt=1&APPID=b9b919d37886ed6661083dad462660ea');
+        console.log('http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + lat + '&lon=' + lon + '&mode=json&units=' + unit + '&cnt=1&APPID=b9b919d37886ed6661083dad462660ea');
+        return $http.get('http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + lat + '&lon=' + lon + '&cnt=1&mode=json&units=' + unit + '&APPID=b9b919d37886ed6661083dad462660ea');
       }
 
       return $http.get('http://api.openweathermap.org/data/2.5/forecast/daily?q=' + city + '&mode=json&units=' + unit + '&cnt=1&APPID=b9b919d37886ed6661083dad462660ea');
